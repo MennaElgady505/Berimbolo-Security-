@@ -1,0 +1,59 @@
+.aboutus-gradient {
+  color: white;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .aboutus-gradient {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;  
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 1;  
+}

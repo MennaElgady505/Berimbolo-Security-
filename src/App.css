@@ -1,0 +1,12 @@
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.text{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.bg{
+  background: linear-gradient(to right, rgb(0, 0, 0), #0c0a0a, #2a2c2e, #6A5C63FF, #373839);
+}

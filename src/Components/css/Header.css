@@ -1,0 +1,26 @@
+
+  .nav-custom-link {
+    font-weight: bold;
+    color: white !important;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-custom-link:hover {
+    color: #ffffff3f;
+    text-decoration: none;
+  }
+  
+  .navbar-nav {
+    gap: 15px;
+  }
+  
+  .gradient {
+    color: white;
+    background: linear-gradient(to right, rgb(0, 0, 0), #0c0a0a, #2a2c2e, #6A5C63FF, #373839);
+  }
+
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  }

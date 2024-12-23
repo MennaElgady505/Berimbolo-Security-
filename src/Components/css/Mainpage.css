@@ -1,0 +1,38 @@
+.main-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  padding: 20px;
+  height: 85vh;
+}
+
+.image-container {
+  max-width: 50%; 
+  margin-left: auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-page {
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center; 
+    height: auto;
+  }
+
+  .image-container {
+    max-width: 100%; 
+    max-height: 100%;
+    margin: 20px 0; 
+  }
+
+  .text-wrap {
+    width: 100%;
+    padding: 0 15px; 
+  }
+
+  .btn {
+    font-size: 1.2em; 
+  }
+}
