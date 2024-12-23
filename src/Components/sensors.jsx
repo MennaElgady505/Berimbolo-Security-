@@ -57,9 +57,6 @@ function Sensors({ addToCart }) {
           </div>
         ))}
       </div>
-      <Link to="/cart">
-        <button className="btn btn-light add">View Cart</button>
-      </Link>
     </div>
   );
 }

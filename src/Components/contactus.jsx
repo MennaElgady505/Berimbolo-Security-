@@ -1,5 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 const ContactForm = () => {
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!name || !surname || !email || !message) {
+            setErrorMessage('All fields are required!');
+            return;
+        }
+        alert('Your message has been submitted!');
+        setName('');
+        setSurname('');
+        setEmail('');
+        setMessage('');
+        setErrorMessage('');
+    };
+
     return (
         <div className="container mt-5 mb-5">
             <div className="row">
@@ -33,23 +54,56 @@ const ContactForm = () => {
                 <div className="col-lg-6 col-md-6">
                     <div className="p-4 text-white rounded">
                         <h2 className="text-center mb-4">Contact Us</h2>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="form-group mb-3">
                                 <label htmlFor="name">Name</label>
-                                <input type="text" className="form-control" id="name" placeholder="Enter your name" required />
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="name"
+                                    placeholder="Enter your name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    required
+                                />
                             </div>
                             <div className="form-group mb-3">
                                 <label htmlFor="surname">Surname</label>
-                                <input type="text" className="form-control" id="surname" placeholder="Enter your surname" required />
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="surname"
+                                    placeholder="Enter your surname"
+                                    value={surname}
+                                    onChange={(e) => setSurname(e.target.value)}
+                                    required
+                                />
                             </div>
                             <div className="form-group mb-3">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" className="form-control" id="email" placeholder="Enter your email" required />
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
                             </div>
                             <div className="form-group mb-3">
                                 <label htmlFor="message">Message</label>
-                                <textarea className="form-control" id="message" rows="4" placeholder="Type your message here..." required></textarea>
+                                <textarea
+                                    className="form-control"
+                                    id="message"
+                                    rows="4"
+                                    placeholder="Type your message here..."
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    required
+                                ></textarea>
                             </div>
+                            {errorMessage && <p className="text-danger">{errorMessage}</p>}
                             <button type="submit" className="btn btn-light w-100 mt-3">Submit</button>
                         </form>
                     </div>
